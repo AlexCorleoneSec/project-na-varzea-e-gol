@@ -1,3 +1,69 @@
+# Projeto Na Vázea é Gol - API de Registro de Jogadores
+
+Este projeto é uma API simples desenvolvida na platadorma Lovable. Ela permite registrar jogadores em um banco de dados, garantindo que cada registro seja único através de um identificador (`hash`). A API pode ser utilizada por aplicações web ou mobile para cadastrar e consultar jogadores.
+
+---
+
+# Funcionamento
+
+- A API possui uma rota principal: `/registrar`.
+- Os dados dos jogadores são enviados via requisição HTTP POST em formato JSON.
+- Os dados são validados e armazenados em um banco de dados SQLite chamado `jogadores.db`.
+- O campo `hash` garante que cada jogador seja único.
+
+---
+
+# Estrutura do Banco de Dados
+
+A tabela `jogadores` possui os seguintes campos:
+
+
+---
+
+# Como executar
+
+
+
+---
+
+# **Endpoints**
+
+# `POST /registrar
+
+
+---
+
+# Detalhes do Código
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+# Principais funções:
+
+- `init_db()`: Cria a tabela `jogadores` se não existir.
+- `validar_dados(data)`: Valida os dados recebidos antes de inserir no banco.
+- `registrar()`: Rota principal que recebe os dados, valida e insere no banco.
+
+---
+
+# Observações
+
+- O campo `hash` deve ter exatamente 64 caracteres e ser único para cada jogador.
+- O campo `numeros` é armazenado como uma string separada por vírgulas.
+- O projeto está configurado para rodar em modo de desenvolvimento (`debug=True`).
+
+---
+
+# Licença
+
+Este projeto é livre para uso educacional e pessoal.
+
+
+
+__________________________________________________________________________________________
 # Teste um projeto milionário
 
 ## Project info
@@ -50,15 +116,6 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
 
 ## How can I deploy this project?
 
